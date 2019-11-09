@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="076bc55c-20b2-4f17-9f41-a7eb2de7ccd1" name="Default Changelist" comment="" />
+    <list default="true" id="076bc55c-20b2-4f17-9f41-a7eb2de7ccd1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Camera.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DistancePredictor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/haarcascade_frontalface_default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/timg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Face.py" beforeDir="false" afterPath="$PROJECT_DIR$/Face.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceDetector.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaceDetector.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,35 +26,74 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="py" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="Python" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="238" />
+          <entry key="dummy" value="6" />
+          <entry key="py" value="2918" />
+          <entry key="txt" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="238" />
+          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="Python" value="2918" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Face.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="208">
+              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
               <folding>
-                <marker date="1573283022883" expanded="true" signature="148:152" ph="..." />
+                <marker date="1573283916522" expanded="true" signature="148:152" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FaceDetector.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="33" column="25" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1573289365053" expanded="true" signature="54:55" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DistancePredictor.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Camera.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="101" column="17" lean-forward="true" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1573292637860" expanded="true" signature="86:87" ph="..." />
+                <marker date="1573292637860" expanded="true" signature="922:960" ph="..." />
+                <marker date="1573292637860" expanded="true" signature="1408:1410" ph="..." />
+                <marker date="1573292637860" expanded="true" signature="1435:1436" ph="..." />
+                <marker date="1573292637860" expanded="true" signature="1435:1942" ph="..." />
+                <marker date="1573292637860" expanded="true" signature="1615:1621" ph="..." />
               </folding>
             </state>
           </provider>
@@ -61,6 +108,15 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>__rframe</find>
+      <find>__</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>_rframe</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -68,6 +124,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Face.py" />
+        <option value="$PROJECT_DIR$/FaceDetector.py" />
+        <option value="$PROJECT_DIR$/DistancePredictor.py" />
+        <option value="$PROJECT_DIR$/BinoCamera.py" />
+        <option value="$PROJECT_DIR$/Camera.py" />
       </list>
     </option>
   </component>
@@ -113,7 +173,70 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Camera">
+    <configuration name="Camera" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="IAmAGoodStaff" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\admin\AppData\Local\Programs\Python\Python36-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Camera.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Face" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="IAmAGoodStaff" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\admin\AppData\Local\Programs\Python\Python36-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Face.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FaceDetector" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="IAmAGoodStaff" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\admin\AppData\Local\Programs\Python\Python36-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FaceDetector.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="IAmAGoodStaff" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,6 +258,18 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.Face" />
+      <item itemvalue="Python.FaceDetector" />
+      <item itemvalue="Python.Camera" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Camera" />
+        <item itemvalue="Python.FaceDetector" />
+        <item itemvalue="Python.Face" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -147,13 +282,22 @@
       <option name="presentableId" value="Default" />
       <updated>1573282642208</updated>
     </task>
+    <task id="LOCAL-00001" summary="add FaceDetector">
+      <created>1573283698462</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573283698462</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17791899" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17791899" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
@@ -161,7 +305,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3291815" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -174,13 +318,47 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add FaceDetector" />
+    <option name="LAST_COMMIT_MESSAGE" value="add FaceDetector" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Face.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="208">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
           <folding>
-            <marker date="1573283022883" expanded="true" signature="148:152" ph="..." />
+            <marker date="1573283916522" expanded="true" signature="148:152" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DistancePredictor.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FaceDetector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1573289365053" expanded="true" signature="54:55" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Camera.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="101" column="17" lean-forward="true" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1573292637860" expanded="true" signature="86:87" ph="..." />
+            <marker date="1573292637860" expanded="true" signature="922:960" ph="..." />
+            <marker date="1573292637860" expanded="true" signature="1408:1410" ph="..." />
+            <marker date="1573292637860" expanded="true" signature="1435:1436" ph="..." />
+            <marker date="1573292637860" expanded="true" signature="1435:1942" ph="..." />
+            <marker date="1573292637860" expanded="true" signature="1615:1621" ph="..." />
           </folding>
         </state>
       </provider>

@@ -16,4 +16,4 @@ class Face:
 # Test Function
 if __name__ == '__main__':
     face = Face((10, 10, 34, 78))
-    print(face.calculate_size())
+    print("The face's size: " + str(face.calculate_size()))
