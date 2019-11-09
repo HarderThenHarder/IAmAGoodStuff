@@ -11,3 +11,9 @@ class Face:
 
     def get_rect(self):
         return self.__rect
+
+
+# Test Function
+if __name__ == '__main__':
+    face = Face((10, 10, 34, 78))
+    print(face.calculate_size())
