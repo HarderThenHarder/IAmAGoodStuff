@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="076bc55c-20b2-4f17-9f41-a7eb2de7ccd1" name="Default Changelist" comment="Finish Face, FaceDetector, Camera Class">
-      <change afterPath="$PROJECT_DIR$/Drawer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DistancePredictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/DistancePredictor.py" afterDir="false" />
+    <list default="true" id="076bc55c-20b2-4f17-9f41-a7eb2de7ccd1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/distance_predict.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,24 +21,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="md" value="2" />
           <entry key="py" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Markdown" value="2" />
           <entry key="Python" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="6" />
+          <entry key="md" value="23" />
           <entry key="py" value="4121" />
-          <entry key="txt" value="68" />
+          <entry key="txt" value="94" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="74" />
+          <entry key="Markdown" value="23" />
+          <entry key="PLAIN_TEXT" value="100" />
           <entry key="Python" value="4121" />
         </counts>
       </usages-collector>
@@ -72,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DistancePredictor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="-105">
               <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
               <folding>
                 <marker date="1573306402085" expanded="true" signature="38:39" ph="..." />
@@ -96,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="101" column="17" lean-forward="true" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+            <state relative-caret-position="1552">
+              <caret line="97" column="17" lean-forward="true" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <marker date="1573292637860" expanded="true" signature="86:87" ph="..." />
@@ -107,6 +110,18 @@
                 <marker date="1573292637860" expanded="true" signature="1435:1942" ph="..." />
                 <marker date="1573292637860" expanded="true" signature="1615:1621" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/distance_predict.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="160">
+                <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -144,6 +159,8 @@
         <option value="$PROJECT_DIR$/assets/Drawer.py" />
         <option value="$PROJECT_DIR$/DistancePredictor.py" />
         <option value="$PROJECT_DIR$/Drawer.py" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/distance_predict.md" />
       </list>
     </option>
   </component>
@@ -164,6 +181,11 @@
             <path>
               <item name="IAmAGoodStaff" type="b2602c69:ProjectViewProjectNode" />
               <item name="IAmAGoodStaff" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IAmAGoodStaff" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IAmAGoodStaff" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -334,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573292737365</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finish Drawer, DistancePredictor Class">
+      <created>1573306901036</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573306901036</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -342,7 +371,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17235902" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17235902" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
@@ -350,7 +379,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3291815" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3291815" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -366,7 +395,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add FaceDetector" />
     <MESSAGE value="Finish Face, FaceDetector, Camera Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish Face, FaceDetector, Camera Class" />
+    <MESSAGE value="Finish Drawer, DistancePredictor Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish Drawer, DistancePredictor Class" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Face.py">
@@ -379,31 +409,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Camera.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="101" column="17" lean-forward="true" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1573292637860" expanded="true" signature="86:87" ph="..." />
-            <marker date="1573292637860" expanded="true" signature="922:960" ph="..." />
-            <marker date="1573292637860" expanded="true" signature="1408:1410" ph="..." />
-            <marker date="1573292637860" expanded="true" signature="1435:1436" ph="..." />
-            <marker date="1573292637860" expanded="true" signature="1435:1942" ph="..." />
-            <marker date="1573292637860" expanded="true" signature="1615:1621" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/Drawer.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Drawer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FaceDetector.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -418,11 +425,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DistancePredictor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="-105">
           <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
           <folding>
             <marker date="1573306402085" expanded="true" signature="38:39" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Drawer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="128">
+            <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Camera.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1552">
+          <caret line="97" column="17" lean-forward="true" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1573292637860" expanded="true" signature="86:87" ph="..." />
+            <marker date="1573292637860" expanded="true" signature="922:960" ph="..." />
+            <marker date="1573292637860" expanded="true" signature="1408:1410" ph="..." />
+            <marker date="1573292637860" expanded="true" signature="1435:1436" ph="..." />
+            <marker date="1573292637860" expanded="true" signature="1435:1942" ph="..." />
+            <marker date="1573292637860" expanded="true" signature="1615:1621" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/distance_predict.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="160">
+            <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
