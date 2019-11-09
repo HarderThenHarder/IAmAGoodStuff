@@ -15,11 +15,15 @@ class FaceDetector:
         :return: Face Object
         """
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        faces = self.__face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30), flags=cv2.CASCADE_SCALE_IMAGE)
-        for face in faces:
-            self.__face_list.append(Face(face))
-        sorted(self.__face_list, key=lambda x: x.calculate_size(), reverse=True)
-        return self.__face_list[0]
+        faces = self.__face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(10, 10), flags=cv2.CASCADE_SCALE_IMAGE)
+
+        if len(faces) > 0:
+            for face in faces:
+                self.__face_list.append(Face(face))
+            sorted(self.__face_list, key=lambda x: x.calculate_size(), reverse=True)
+            return self.__face_list[0]
+
+        return None
 
 
 # Test function
