@@ -1,13 +1,8 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });
-</script>
-
 ## Distance Predict with Bino-Camera
 ---
 ### 1. What is the problem?
 What is the distance between object and us? Here is the picture to show what we need to compute. Left frame and Right frame express the left-view and right-view of a bino-camera( or two cameras ). The top `black` object is the our measuring `target`, while the (x1, y1) and (x2, y2) are the `cross points` between `frame` and `the line of target to camera`. Besides, `dL` is the `gap` between `left-camera` and `right-camera`, this value must be known before we start to calculate. The distance we need to figure out is the `d`, which is the vertical line in the center.<br><br>
-<img src="assets/distance_predict_image.jpg">
+<img src="distance_predict_image.jpg">
 
 ### 2. Solve this problem
 #### dL
@@ -35,4 +30,24 @@ $\tan{\frac{\beta}{2}} = \frac{\frac{width}{2}}{d'} \rightarrow d' = \frac{width
 #### Result
 Finally we can draw the conclusion of d:<br><br>
 $d = \frac{dL}{\frac{1}{\sqrt{\frac{y_1^2 + d'^2}{x_1^2}}} + \frac{1}{\sqrt{\frac{y_2^2 + d'^2}{x_2^2}}}} \qquad , \qquad d'= \frac{width}{2\tan\frac{\beta}{2}}$<br><br>
-Where $x1, y1$ are the coordinate in the left frame, while $x2, y2$ are the coordinate in the right frame.
+Where $x1, y1$ are the coordinate in the left frame, while $x2, y2$ are the coordinate in the right frame.<br><br>
+
+### 3. The Special Case
+#### Left Case ( left_x < 0 )
+There are some special cases, see as belows. If left_x is lower than center_x, we can't use the equation $x_1 + x_2 = dL$ &nbsp;( now $x_1 + x_2 > dL$ ), here is the solution of this case.<br><br>
+<img src="assets/special case1.png"><br><br>
+
+According to this picture, we can build following equation set:<br><br>
+$a = baseline \times \sin\alpha_2$<br>
+$b = \frac{a}{\sin\alpha_3}$<br>
+$d = b \times \sin\alpha_1   \qquad  \qquad  \qquad  \qquad  \qquad \rightarrow d = \frac{baseline \times \sin\alpha_2 \times \sin\alpha_1}{\sin(\alpha_1 - \alpha_2)}$<br>
+$\sin\alpha_3 = \sin(\alpha_1 - \alpha2)$<br><br>
+
+$\sin\alpha_1 = \sqrt\frac{y_1^2 + d'^2}{x_1^2 + y_1^2 + d'^2} \ \ , \qquad  \sin\alpha_2 = \sqrt\frac{y_2^2 + d'^2}{x_2^2 + y_2^2 + d'^2}$<br><br>
+
+#### Right Case ( right_x > 0 )
+The other case is the object is on the right of camera, see as below:<br><br>
+<img src="assets/special case2.png"><br><br>
+The main principle of solving is same as Left Case, only difference is $\alpha_1$ and $\alpha_2$ are exchanged.<br><br>
+$\sin\alpha_1 = \sqrt\frac{y_2^2 + d'^2}{x_2^2 + y_2^2 + d'^2} \ \ , \qquad  \sin\alpha_1 = \sqrt\frac{y_1^2 + d'^2}{x_1^2 + y_1^2 + d'^2}$<br><br>
+
