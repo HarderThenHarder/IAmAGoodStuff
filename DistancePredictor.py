@@ -24,10 +24,23 @@ class DistancePredictor:
         relative_right_x = right_pos[0] - self._center[0]
         relative_right_y = right_pos[1] - self._center[1]
 
-        if relative_left_x is not 0 and relative_right_x is not 0:
-            tanA1 = 1 / math.sqrt((relative_left_y ** 2 + self._focal ** 2) / relative_left_x ** 2)
-            tanA2 = 1 / math.sqrt((relative_right_y ** 2 + self._focal ** 2) / relative_right_x ** 2)
-            return self._baseline / (tanA1 + tanA2)
+        if abs(relative_left_x) > 1e-4 and abs(relative_right_x) > 1e-4:
+            if relative_left_x < -1e-4:
+                sinA1 = math.sqrt((relative_left_y ** 2 + self._focal ** 2) / (relative_left_x ** 2 + relative_left_y ** 2 + self._focal ** 2))
+                sinA2 = math.sqrt((relative_right_y ** 2 + self._focal ** 2) / (relative_right_x ** 2 + relative_right_y ** 2 + self._focal ** 2))
+                A1 = math.asin(sinA1)
+                A2 = math.asin(sinA2)
+                return self._baseline * sinA1 * sinA2 / math.sin(A1 - A2)
+            elif relative_right_x > 1e-4:
+                sinA1 = math.sqrt((relative_right_y ** 2 + self._focal ** 2) / (relative_right_x ** 2 + relative_right_y ** 2 + self._focal ** 2))
+                sinA2 = math.sqrt((relative_left_y ** 2 + self._focal ** 2) / (relative_left_x ** 2 + relative_left_y ** 2 + self._focal ** 2))
+                A1 = math.asin(sinA1)
+                A2 = math.asin(sinA2)
+                return self._baseline * sinA1 * sinA2 / math.sin(A1 - A2)
+            else:
+                tanA1 = 1 / math.sqrt((relative_left_y ** 2 + self._focal ** 2) / relative_left_x ** 2)
+                tanA2 = 1 / math.sqrt((relative_right_y ** 2 + self._focal ** 2) / relative_right_x ** 2)
+                return self._baseline / (tanA1 + tanA2)
 
         return 0
 

@@ -8,9 +8,10 @@ import numpy as np
 
 def main():
     bino_cam = BinoCamera(0, True)
-    bino_cam.set_width_height((1280, 720))
+    bino_cam.set_width_height((1280, 300))
     face_detector = FaceDetector()
-    distance_predictor = DistancePredictor(100, bino_cam.get_width_height()[0], bino_cam.get_width_height()[1], 60)
+    # The width of frame is the half of camera width.
+    distance_predictor = DistancePredictor(100, bino_cam.get_width_height()[0] / 2, bino_cam.get_width_height()[1], 60)
     distance = 0
 
     while True:
@@ -34,7 +35,7 @@ def main():
 
         if left_face and right_face:
             distance = distance_predictor.predict_distance((left_face.get_x(), left_face.get_y()), (right_face.get_x(), right_face.get_y()))
-        Drawer.text(bino_cam.get_lframe(), "Distance(cm): %.2fcm" % (distance / 10), (20, 20), 0.5, (0, 255, 0))
+        Drawer.text(bino_cam.get_lframe(), "Distance(m): %.2fm" % (distance / 1000), (20, 20), 0.5, (0, 255, 0))
 
         cv2.imshow("I am a good stuff v1.0 @ FPS: %d" % bino_cam.get_fps(), np.hstack((bino_cam.get_lframe(), bino_cam.get_rframe())))
         if cv2.waitKey(1) == ord('q'):
