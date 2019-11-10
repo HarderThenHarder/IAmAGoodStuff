@@ -2,7 +2,7 @@
 ---
 ### 1. What is the problem?
 What is the distance between object and us? Here is the picture to show what we need to compute. Left frame and Right frame express the left-view and right-view of a bino-camera( or two cameras ). The top `black` object is the our measuring `target`, while the (x1, y1) and (x2, y2) are the `cross points` between `frame` and `the line of target to camera`. Besides, `dL` is the `gap` between `left-camera` and `right-camera`, this value must be known before we start to calculate. The distance we need to figure out is the `d`, which is the vertical line in the center.<br><br>
-<img src="distance_predict_image.jpg">
+<img src="assets/distance_predict_image.jpg">
 
 ### 2. Solve this problem
 #### dL
