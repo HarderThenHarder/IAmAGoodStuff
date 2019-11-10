@@ -7,7 +7,7 @@ import numpy as np
 
 
 def main():
-    bino_cam = BinoCamera(1, True)
+    bino_cam = BinoCamera(0, True)
     bino_cam.set_width_height((1280, 720))
     face_detector = FaceDetector()
     distance_predictor = DistancePredictor(100, bino_cam.get_width_height()[0], bino_cam.get_width_height()[1], 60)
@@ -25,12 +25,12 @@ def main():
         if left_face:
             Drawer.dotted_rectangle(bino_cam.get_lframe(), (left_face.get_x(), left_face.get_y()),
                                     (left_face.get_x() + left_face.get_width(),
-                                     left_face.get_y() + left_face.get_height()), (0, 255, 0), 1)
+                                     left_face.get_y() + left_face.get_height()), (0, 0, 255), 2)
 
         if right_face:
             Drawer.dotted_rectangle(bino_cam.get_rframe(), (right_face.get_x(), right_face.get_y()),
                                     (right_face.get_x() + right_face.get_width(),
-                                     right_face.get_y() + right_face.get_height()), (0, 255, 0), 1)
+                                     right_face.get_y() + right_face.get_height()), (0, 0, 255), 2)
 
         if left_face and right_face:
             distance = distance_predictor.predict_distance((left_face.get_x(), left_face.get_y()), (right_face.get_x(), right_face.get_y()))
