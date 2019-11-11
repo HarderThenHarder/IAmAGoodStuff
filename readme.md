@@ -13,13 +13,3 @@ python main.py
 <img src="assets/example2.jpg"><br>
 <img src="assets/example3.jpg"><br>
 <img src="assets/example4.jpg"><br>
-
-
-### 3. Class Diagram
-This project has 6 basic classes, each class's members and methods show as belows.<br><br>
-<img src="assets/Class Diagram.png">
-
-### 4. Program Flow Chart
-The program flow chart shows as below.<br><br>
-<img src="assets/program flow chart.jpg">
-
