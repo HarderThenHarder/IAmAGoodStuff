@@ -12,9 +12,9 @@ class Drawer:
         cv2.circle(frame, (width // 2, height // 2), 50, (0, 255, 0), 1)
 
     @staticmethod
-    def text(frame, text, pos, size, color):
+    def text(frame, text, pos, size, color, width=1):
         font = cv2.FONT_HERSHEY_SIMPLEX
-        cv2.putText(frame, text, pos, font, size, color, 1)
+        cv2.putText(frame, text, pos, font, size, color, width)
 
     @staticmethod
     def dotted_rectangle(frame, start, end, color, line_width):
