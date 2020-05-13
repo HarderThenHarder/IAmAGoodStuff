@@ -29,20 +29,13 @@ Let's solve this problem now!
 
 * **dL**
 
-The `dL` we are already know, so we want to use this value to compute the result of `d`. First, we build the equation set:
+The `dL` we are already know, so we want to use this value to compute the result of `d`. First, we build the equation set:<br><br>
+$dL = x_1 + x_2$<br>
+$x_1 = d \times \frac{1}{\tan\alpha_1}$<br>
+$x_2 = d \times \frac{1}{\tan\alpha_2}$<br>
 <br>
-$$
-dL = x_1 + x_2 \\
-x_1 = d \times \frac{1}{\tan\alpha_1}\\
-x_2 = d \times \frac{1}{\tan\alpha_2}\\
-$$
-<br>So we can infer that:
-
-$$
-d = \frac{dL}{{\frac{1}{\tan\alpha_1}} + {\frac{1}{\tan\alpha_2}}}
-$$
-
-Now the question is: how to express the $\tan\alpha_1$ and $\tan\alpha_2$? To solve this problem, we need to use vector $\overrightarrow{p_1}$ and vector $\overrightarrow{p_2}$.
+So we can infer that&nbsp; 
+$\rightarrow d = \frac{dL}{{\frac{1}{\tan\alpha_1}} + {\frac{1}{\tan\alpha_2}}}$. Now the question is: how to express the $\tan\alpha_1$ and $\tan\alpha_2$? To solve this problem, we need to use vector $\overrightarrow{p_1}$ and vector $\overrightarrow{p_2}$.<br><br>
 
 * **tanα**
 
