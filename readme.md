@@ -29,53 +29,58 @@ Let's solve this problem now!
 
 * **dL**
 
-The `dL` we are already know, so we want to use this value to compute the result of `d`. First, we build the equation set:<br><br>
-$dL = x_1 + x_2$<br>
-$x_1 = d \times \frac{1}{\tan\alpha_1}$<br>
-$x_2 = d \times \frac{1}{\tan\alpha_2}$<br>
-<br>
-So we can infer that&nbsp; 
-$\rightarrow d = \frac{dL}{{\frac{1}{\tan\alpha_1}} + {\frac{1}{\tan\alpha_2}}}$. Now the question is: how to express the $\tan\alpha_1$ and $\tan\alpha_2$? To solve this problem, we need to use vector $\overrightarrow{p_1}$ and vector $\overrightarrow{p_2}$.<br><br>
+The `dL` we are already know, so we want to use this value to compute the result of `d`. First, we build the equation set:
+$$
+dL = x_1 + x_2 \\
+x_1 = d \times \frac{1}{\tan\alpha_1}\\
+x_2 = d \times \frac{1}{\tan\alpha_2}\\
+$$
+So we can infer that:
+
+$$
+d = \frac{dL}{{\frac{1}{\tan\alpha_1}} + {\frac{1}{\tan\alpha_2}}}
+$$
+
+Now the question is: how to express the $\tan\alpha_1$ and $\tan\alpha_2$? To solve this problem, we need to use vector $\overrightarrow{p_1}$ and vector $\overrightarrow{p_2}$.
 
 * **tanα**
 
-Note that $\overrightarrow{u_1}$ and $\overrightarrow{u_2}$ are unit vector( which length equals 1). Use the law of cosines, we can get that:<br> 
+Note that $\overrightarrow{u_1}$ and $\overrightarrow{u_2}$ are unit vector( which length equals 1). Use the law of cosines, we can get that: 
 
 $$
 \cos\alpha_1 = \frac{\overrightarrow{p_1} \cdot \overrightarrow{u_1}}{|\overrightarrow{p_1}|\times|\overrightarrow{u_1}|} = \frac{\overrightarrow{p_1} \cdot \overrightarrow{u_1}}{|\overrightarrow{p_1}|}, \qquad \overrightarrow{p_1} = (x, y, d'), \overrightarrow{u_1} = (1, 0, 0)
 $$
-<br>
+
 ( **d'** is the **focal length in px**, not in mm! )
 
 Then the $\cos\alpha_1$ could be expressed as: 
-<br>
+
 $$
 \cos\alpha_1 = \frac{x}{\sqrt{x^2 + y^2 + d'^2}}
 $$
-<br>
-same as $\cos\alpha_2$.<br>
+same as $\cos\alpha_2$.
 
-Now we can express the $\tan\alpha$ using the $\cos\alpha$:<br>
+Now we can express the $\tan\alpha$ using the $\cos\alpha$:
 
 $$
 \tan\alpha = \sqrt{\frac{1}{\cos\alpha^2} - 1} \rightarrow \tan\alpha_1 = \sqrt{\frac{x^2 + y^2 + d'^2}{x^ 2} - 1} = \sqrt{\frac{y^2 + d'^2}{x^2}}
 $$
-<br>
+
 * **d'**
 
 As I said, d' is the focal length in `px` unit, not in mm. Because we express the $\overrightarrow{p_1}$ in (x, y, d'), the x and y are the **pixel** unit, so the d' must use the same unit. To calculate the d', we need to know the FOV(Filed of view), noted by $\beta$ in top picture. Since we know the *width* and *height* of our frame, we can calculate d'.
-<br>
+
 $$
 \tan{\frac{\beta}{2}} = \frac{\frac{width}{2}}{d'} \rightarrow d' = \frac{width}{2\tan\frac{\beta}{2}}
 $$
-<br>
+
 * **Result**
-Finally we can draw the conclusion of d:<br>
+Finally we can draw the conclusion of d:
 
 $$
 d = \frac{dL}{\frac{1}{\sqrt{\frac{y_1^2 + d'^2}{x_1^2}}} + \frac{1}{\sqrt{\frac{y_2^2 + d'^2}{x_2^2}}}} \qquad , \qquad d'= \frac{width}{2\tan\frac{\beta}{2}}
 $$
-<br>
+
 Where $x1, y1$ are the coordinate in the left frame, while $x2, y2$ are the coordinate in the right frame.
 
 > Now we get the final equation to calculate the distance, but there are still **2 special cases** we need to think about: Left case and Right case.
@@ -87,31 +92,24 @@ There are some special cases, see as below. If left_x is lower than center_x, we
 <div align=center><img src="assets/special case1.png" width=450></div>
 
 According to this picture, we can build following equation set:
-<br>
 $$
 a = baseline \times \sin\alpha_2, \qquad b = \frac{a}{\sin\alpha_3}, \qquad d = b \times \sin\alpha_1
 $$
-<br>
 which we can infer that:
-<br>
 $$
 d = \frac{baseline \times \sin\alpha_2 \times \sin\alpha_1}{\sin(\alpha_1 - \alpha_2)}
 $$
-<br>
 where:
-<br>
 $$
 \sin\alpha_3 = \sin(\alpha_1 - \alpha2),\qquad \sin\alpha_1 = \sqrt\frac{y_1^2 + d'^2}{x_1^2 + y_1^2 + d'^2}, \qquad  \sin\alpha_2 = \sqrt\frac{y_2^2 + d'^2}{x_2^2 + y_2^2 + d'^2}
 $$
-<br>
 
 2. **Right Case ( right_x > 0 )**
-The other case is the object is on the right of camera, see as below:
+   The other case is the object is on the right of camera, see as below:
    
    <div align=center><img src="assets/special case2.png" width=450></div>
    
-The main principle of solving is same as Left Case, only difference is $\alpha_1$ and $\alpha_2$ are exchanged.
-<br>
+   The main principle of solving is same as Left Case, only difference is $\alpha_1$ and $\alpha_2$ are exchanged.
 $$
 \sin\alpha_1 = \sqrt\frac{y_2^2 + d'^2}{x_2^2 + y_2^2 + d'^2} \ \ , \qquad  \sin\alpha_1 = \sqrt\frac{y_1^2 + d'^2}{x_1^2 + y_1^2 + d'^2}
 $$
